@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direction Informar - Navigation System</title>
+    <link rel="stylesheet" href="direction.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🗺️ Direction Informar</h1>
+            <p>Navigate with ease</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Panel - Input & Directions -->
+            <div class="left-panel">
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="start">Starting Point:</label>
+                        <input type="text" id="start" placeholder="Enter starting location" value="New York">
+                    </div>
+                    <div class="input-group">
+                        <label for="destination">Destination:</label>
+                        <input type="text" id="destination" placeholder="Enter destination" value="Los Angeles">
+                    </div>
+                    <button id="findDirection" class="btn-primary">Find Direction</button>
+                </div>
+
+                <div class="directions-panel">
+                    <h3>📍 Route Information</h3>
+                    <div id="routeInfo" class="route-info">
+                        <p>Enter locations and click "Find Direction" to get started</p>
+                    </div>
+                </div>
+
+                <div class="steps-panel">
+                    <h3>📋 Turn-by-Turn Directions</h3>
+                    <div id="stepsList" class="steps-list">
+                        <p class="empty-state">No directions yet</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Map -->
+            <div class="right-panel">
+                <div class="map-container">
+                    <div id="map" class="map">
+                        <div class="map-placeholder">
+                            <div class="compass">
+                                <div class="compass-north">N</div>
+                                <div class="compass-east">E</div>
+                                <div class="compass-south">S</div>
+                                <div class="compass-west">W</div>
+                            </div>
+                            <p>Interactive Map View</p>
+                        </div>
+                    </div>
+                    <div class="map-controls">
+                        <button class="map-btn" id="zoomIn" title="Zoom In">+</button>
+                        <button class="map-btn" id="zoomOut" title="Zoom Out">−</button>
+                        <button class="map-btn" id="currentLocation" title="Current Location">📍</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Distance & Time Summary -->
+        <div class="summary-section">
+            <div class="summary-card">
+                <div class="summary-icon">📏</div>
+                <div class="summary-content">
+                    <span class="label">Total Distance</span>
+                    <span id="totalDistance" class="value">0 km</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">⏱️</div>
+                <div class="summary-content">
+                    <span class="label">Estimated Time</span>
+                    <span id="estimatedTime" class="value">0 mins</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">🚗</div>
+                <div class="summary-content">
+                    <span class="label">Transport Mode</span>
+                    <span id="transportMode" class="value">Driving</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="direction.js"></script>
+</body>
+</html>
